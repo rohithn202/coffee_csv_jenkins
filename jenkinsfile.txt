@@ -1,5 +1,5 @@
 node {
     stage ("build_python") {
-        bat "python C:\Users\dines\Desktop\pythontasks\coffee.py"
+        bat "python C:/Users/dines/Desktop/pythontasks/coffee.py"
     } 
 }   
