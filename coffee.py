@@ -8,7 +8,7 @@ for coffee_item in coffeeurl_json:
     coffee_titles.append(coffee_item["title"])
 coffee_titles_sorted = sorted(coffee_titles)
 print(coffee_titles_sorted)
-with open('coffee.csv', 'w') as coffee_csv_file:
+with open('C:/Users/dines/Desktop/pythontasks/coffee.csv', 'w') as coffee_csv_file:
     coffee_write = csv.writer(coffee_csv_file)
     for coffee_titles_sorted_row in coffee_titles_sorted:
         coffee_write.writerow([coffee_titles_sorted_row])
