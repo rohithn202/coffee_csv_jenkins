@@ -7,7 +7,7 @@ node {
     }
     stage('SonarQube analysis') {
         withSonarQubeEnv('mysonarqube-Version 9.9.1') {
-            bat "sonar-scanner"
+            bat "sonar-scanner -Dsonar.login=squ_6919198b8f89c99f599ecd82fcf492d94ac82bae"
         }
     }
 }
