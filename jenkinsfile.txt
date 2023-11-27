@@ -3,7 +3,7 @@ node {
         bat "python C:/Users/dines/Desktop/pythontasks/coffee.py"
     } 
     stage('SCM') {
-        git 'https://github.com/rohithn202/coffee_csv_jenkins.git'
+        git branch: 'main', url: 'https://github.com/rohithn202/coffee_csv_jenkins.git'
     }
     stage('SonarQube analysis') {
         withSonarQubeEnv('My SonarQube Server') {
