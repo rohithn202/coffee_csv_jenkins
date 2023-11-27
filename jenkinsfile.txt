@@ -6,7 +6,7 @@ node {
         git branch: 'main', url: 'https://github.com/rohithn202/coffee_csv_jenkins.git'
     }
     stage('SonarQube analysis') {
-        withSonarQubeEnv('My SonarQube Server') {
+        withSonarQubeEnv('mysonarqube-Version 9.9.1') {
             bat "sonar-scanner"
         }
     }
