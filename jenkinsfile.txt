@@ -1,14 +1,15 @@
 node {
-    stage ("build_python") {
-        bat "python C:/Users/dines/Desktop/pythontasks/coffee.py"
-    } 
     stage('SCM') {
         git branch: 'main', url: 'https://github.com/rohithn202/coffee_csv_jenkins.git'
+    } 
+    stage ("build_python") {
+        bat "python coffee.py"
     }
     stage('SonarQube analysis') {
         withSonarQubeEnv('mysonarqube-Version 9.9.1') {
-            bat "sonar-scanner -Dsonar.login=squ_6919198b8f89c99f599ecd82fcf492d94ac82bae"
+            bat "sonar-scanner"
         }
     }
 }
         
+
